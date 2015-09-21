@@ -51,7 +51,7 @@ $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
-    echo "Message sent!";
+    echo "Message sent successfully!";
 }
 
 ?>
