@@ -40,7 +40,7 @@ $mail->setFrom('hassanajazch@gmail', 'Hassan Ajaz');
 $mail->addReplyTo('replyto@example.com', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('12019020027@umt.edu.pk', 'hassan');
+$mail->addAddress('zee2790@gmail.com', '2222');
 
 //Set the subject line
 $mail->Subject = 'Here is the subject';
@@ -55,3 +55,4 @@ if (!$mail->send()) {
 }
 
 ?>
+
