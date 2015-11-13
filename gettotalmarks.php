@@ -9,9 +9,9 @@ if ($conn->connect_error) {
 } 
 $uuid=urldecode($_POST["uuid"]);
 //$posttext=urldecode($_POST["posttext"]);
- //  $postid=(int)$postid;
+ // $postid=(int)$postid;
 
-	//$sql = "select * from newpost " ;
+	//$sql = "select * from newpost " 
 $sql="SELECT * FROM totalmarks where uuid='$uuid'";
 	$result = $conn->query($sql);
 	$userData = array();
