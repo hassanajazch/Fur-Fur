@@ -9,12 +9,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$id=urldecode($_POST["id"]);
+//$id=urldecode($_POST["id"]);
 
-   $id=(int)$id;
+  // $id=(int)$id;
 
-	$sql = "select * from mynewpost where id>'$id' order by id " ;
+	//$sql = "select * from mynewpost where id>'$id' order by id " ;
 //$sql="SELECT * FROM mynewpost ORDER BY id DESC";
+	$sql = "select * from mynewpost where id>'1' order by id";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
