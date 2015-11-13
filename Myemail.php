@@ -36,7 +36,7 @@ $mail->setFrom('zee2790@gmail', 'Hassan Ajaz');
 //Set an alternative reply-to address
 $mail->addReplyTo('replyto@example.com', 'First Last');
 //Set who the message is to be sent to
-$mail->addAddress($email, 'hassan');
+$mail->addAddress('12019020027@umt.edu.pk', 'hassan');
 //Set the subject line
 $mail->Subject = 'Here is the subject';
 $mail->Body    = 'This is a test mail<b>Test Test</b>'+$uuid;
