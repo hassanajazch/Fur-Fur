@@ -19,6 +19,9 @@ $mail->Host = 'smtp.gmail.com';
 // if your network does not support SMTP over IPv6
 
 //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
+$uuid=urldecode($_POST["uuid"]);
+$email=urldecode($_POST["email"]);
+$uuid=(int) $uuid;
 $mail->Port = 587;
 
 //Set the encryption system to use - ssl (deprecated) or tls
@@ -40,11 +43,11 @@ $mail->setFrom('hassanajazch@gmail', 'Hassan Ajaz');
 $mail->addReplyTo('replyto@example.com', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('zee2790@gmail.com', '2222');
+$mail->addAddress('12019020027@umt.edu.pk', '2222');
 
 //Set the subject line
 $mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is a test mail<b>Test Test</b>';
+$mail->Body    = 'This is a test mail<b>Test Test</b>'+$uuid;
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 //send the message, check for errors
