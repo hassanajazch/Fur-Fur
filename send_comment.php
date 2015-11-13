@@ -12,7 +12,8 @@ if ($conn->connect_error) {
 }
  
 $ok=0;
-
+$comemail = $_POST["comemail"];
+$comuuid = $_POST["comuuid"];
 $postid = $_POST["postid"];
 $userid = $_POST["userid"];
 $emailid = $_POST["emailid"];
@@ -27,7 +28,7 @@ $commenttext = $_POST["commenttext"];
 
 
 $sql = "INSERT INTO comment (postid,commenttext,userid,emailid)
-VALUES ('$postid','$commenttext','$userid',$emailid)";
+VALUES ('$postid','$commenttext','$comuuid',$comemail)";
 
 
 if ($conn->query($sql) === TRUE) {
