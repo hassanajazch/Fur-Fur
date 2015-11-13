@@ -12,14 +12,22 @@ if ($conn->connect_error) {
 }
  
 $ok=0;
+
 $postid = $_POST["postid"];
 $userid = $_POST["userid"];
 $emailid = $_POST["emailid"];
 $postid=(int)$postid;
 $commenttext = $_POST["commenttext"];
 
+//$postid = "11";
+//$userid = "357503050188210";
+//$emailid = "111";
+//$postid=(int)$postid;
+//$commenttext = "dddddddddd";
+
+
 $sql = "INSERT INTO comment (postid,commenttext,userid,emailid)
-VALUES ('$postid','$commenttext','$userid','$emailid')";
+VALUES ('$postid','$commenttext','$userid',$emailid)";
 
 
 if ($conn->query($sql) === TRUE) {
@@ -28,6 +36,7 @@ $ok=1;
 } else {
     echo "nosuccessfully";
 }
+
 if($ok==1)
 {
 $sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$userid' ";
@@ -42,6 +51,7 @@ else {
 }
 
 }
+
 $conn->close();
 exit();
 ?>
