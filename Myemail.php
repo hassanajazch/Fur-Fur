@@ -1,12 +1,13 @@
 <?php
 //error_reporting(-1);
 //ini_set('display_errors', 'On');
-//require 'mail_process/libraries/PHPMailer/PHPMailerAutoload.php';
-require 'libraries/PHPMailer/PHPMailerAutoload.php';
+require 'mail_process/libraries/PHPMailer/PHPMailerAutoload.php';
+//require 'libraries/PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 //Tell PHPMailer to use SMTP
 $mail->isSMTP();
 //Enable SMTP debugging
+
 // 0 = off (for production use)
 // 1 = client messages
 // 2 = client and server messages
