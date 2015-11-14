@@ -13,14 +13,14 @@ if ($conn->connect_error) {
 $posttext = $_POST["posttext"];
 //$uuid = $_POST["uuid"];
 $gcmid = $_POST["gcmid"];
-$myuni = $_POST["uni"];
+//$myuni = $_POST["uni"];
 $email = $_POST["email"];
 $count = $_POST["count"];
 $imageurl = $_POST["imageurl"];
 $o = $_POST["orientation"];
 $count=(int) $count;
 $uuid='357503050188210';
-
+$myuni='AAA';
 // $posttext = "posttext";
 // $uuid = "uuid";
 // $gcmid = "333";
