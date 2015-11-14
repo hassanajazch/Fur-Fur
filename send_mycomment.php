@@ -13,8 +13,8 @@ if ($conn->connect_error) {
  
 //$ok=0;
 
-$comemail = $_POST["comemail"];
-$comuuid = $_POST["comuuid"];
+//$comemail = $_POST["comemail"];
+//$comuuid = $_POST["comuuid"];
 $postid = $_POST["postid"];
 //$userid = $_POST["userid"];
 //$emailid = $_POST["emailid"];
@@ -26,8 +26,8 @@ $commenttext = $_POST["commenttext"];
 // $emailid = "aaaa";
 // $postid=(int)$postid;
 // $commenttext = "dddddddddd";
-// $comuuid='357503050188210';
-// $comemail='222';
+ $comuuid='357503050188210';
+ $comemail='zzz';
 $ok=0;
 $sql = "INSERT INTO comment (postid,commenttext,userid,emailid)
 VALUES ('$postid','$commenttext','$comuuid',$comemail)";
