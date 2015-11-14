@@ -19,6 +19,7 @@ $count = $_POST["count"];
 $imageurl = $_POST["imageurl"];
 $o = $_POST["orientation"];
 $count=(int) $count;
+//ok=0
 //$uuid='357503050188210';
 //$myuni='AAA';
 // $posttext = "posttext";
