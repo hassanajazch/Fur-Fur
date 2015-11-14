@@ -16,12 +16,17 @@ if ($conn->connect_error) {
         $comtext = $_POST["text"];
         $postid = $_POST["postid"];
         
+        //$regid = '999';
+        //$comtext = 'iiijj';
+       // $postid = '30';
+        
+        
 // $regid = 'APA91bHpdbUajcEpsSoSWeOSHmv3uU9o0mY5wJZCuG5zwjC4dU-1p_0SY-CCIdjvWq3ZJU4yMcqCjSuoHCGV5vkabVzDqYLhlobdYEIo7e8hKgnNoQmEPhfzRigqiGiqKdV97-mquZ1mD3Vi-DMAGHniX4yF4VFFVedkUFk9in4JjjlMl5eJDKk';
 //         $comtext = 'hello zee';
 //         $postid = '30';
         
 
-$sql = "INSERT INTO notification (regid,commenttext,postid)
+$sql = "INSERT INTO notification (uuid,commenttext,postid)
 VALUES ($regid,'$comtext','$postid')";
 
 
@@ -34,13 +39,13 @@ $ok=1;
 $registrationIDs= array($regid);
 //$name="zzzzz";
 //$address="fsd";
-$deal="ok";
-$valid="OK";
-		echo "jjjj";
-		echo $comtext;
+//$deal="ok";
+//$valid="OK";
+		//echo "jjjj";
+		//echo $comtext;
 		//$postid='30';
-			echo $regid;
-$message = array("postid" => $postid, "deal" => $deal, "valid" => $valid, "comtext" => $comtext);
+// 			echo $regid;
+$message = array("postid" => $postid, "comtext" => $comtext);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
@@ -64,11 +69,11 @@ $message = array("postid" => $postid, "deal" => $deal, "valid" => $valid, "comte
 	
 echo $result;
 echo "close";
-//if ($conn->query($sql) === TRUE) {
-  //  echo "successfully";
-//} else {
-  //  echo "nosuccessfully";
-//}
+if ($conn->query($sql) === TRUE) {
+   echo "successfully";
+} else {
+   echo "nosuccessfully";
+}
 
 $conn->close();
 exit();
