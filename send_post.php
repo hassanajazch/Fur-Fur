@@ -45,7 +45,7 @@ $ok=0;
 if($ok==1)
 {
 $ok=0;
-$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$uuid' ";
+$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='357503050188210' ";
 
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";
