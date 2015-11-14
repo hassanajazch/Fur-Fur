@@ -12,13 +12,13 @@ if ($conn->connect_error) {
 }
 // please enter the api_key you received from google console
 	$api_key = "AIzaSyAYnU5jKqyzD2l1J9NqA6sODgpZP_LGJbs";
-        // $regid = $_POST["regid"];
-        // $comtext = $_POST["text"];
-        // $postid = $_POST["postid"];
+         $regid = $_POST["regid"];
+         $comtext = $_POST["text"];
+        $postid = $_POST["postid"];
         
-        $regid = '999';
-        $comtext = 'ppoooo';
-        $postid = '51';
+        //$regid = '999';
+        //$comtext = 'ppoooo';
+       // $postid = '51';
         
         
 // $regid = 'APA91bHpdbUajcEpsSoSWeOSHmv3uU9o0mY5wJZCuG5zwjC4dU-1p_0SY-CCIdjvWq3ZJU4yMcqCjSuoHCGV5vkabVzDqYLhlobdYEIo7e8hKgnNoQmEPhfzRigqiGiqKdV97-mquZ1mD3Vi-DMAGHniX4yF4VFFVedkUFk9in4JjjlMl5eJDKk';
