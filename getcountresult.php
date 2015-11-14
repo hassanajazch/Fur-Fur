@@ -14,7 +14,7 @@ $postid=urldecode($_POST["postid"]);
   
  $postid=(int)$postid;
 
-$sql = "select count from mynewpost where  id='76' " ;
+$sql = "select count from mynewpost where  id='$postid' " ;
 $result1 = $conn->query($sql);
 
 if ($conn->query($sql) === TRUE) {

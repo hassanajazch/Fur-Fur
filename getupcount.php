@@ -13,8 +13,9 @@ $id=urldecode($_POST["id"]);
 
 $uuid=urldecode($_POST["uuid"]);
 $ok=0;
+//$uuid='357503050188210';
 //$posttext=urldecode($_POST["posttext"]);
-  // $id=(int)$id;
+   //$id=(int)$id;
 
 	
 $sql="UPDATE mynewpost SET count=count+1 WHERE id='$id' ";
@@ -32,7 +33,7 @@ $ok=1;
 if($ok==1)
 {
 $ok=0;
-$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$uuid' ";
+$sl="UPDATE totalmarks SET count=count+3 WHERE uuid='$uuid' ";
 
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";

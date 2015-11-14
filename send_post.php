@@ -36,8 +36,26 @@ VALUES ('$uuid','$posttext','$email', '$imageurl', '$count','$gcmid','$o','$myun
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
+$ok=0;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+/////////
+if($ok==1)
+{
+$ok=0;
+$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$uuid' ";
+
+if ($conn->query($sl) === TRUE) {
+echo "sucessfully";
+
+}
+else {
+
+    echo "nosuccessfully";
+}
+
 }
 
 $conn->close();

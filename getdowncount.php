@@ -11,6 +11,8 @@ if ($conn->connect_error) {
 $id=urldecode($_POST["id"]);
 $uuid=urldecode($_POST["uuid"]);
 $ok=0;
+//$id='53';
+//$uuid='357503050188210';
 $sql="UPDATE mynewpost SET count=count-1 WHERE id='$id'";
 	
 //$result = $conn->query($sql);
