@@ -16,7 +16,7 @@ $ok=0;
 //$uuid='357503050188210';
 //$posttext=urldecode($_POST["posttext"]);
    //$id=(int)$id;
-
+//ll
 	
 $sql="UPDATE mynewpost SET count=count+1 WHERE id='$id' ";
 //$sql="SELECT * FROM comment postid='$postid'";

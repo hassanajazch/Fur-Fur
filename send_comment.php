@@ -58,6 +58,7 @@ else {
 
 if($ok==1)
 {
+	$ok=0;
 $sl="UPDATE totalmarks SET count=count+1 WHERE uuid='$comuuid' ";
 
 if ($conn->query($sl) === TRUE) {

@@ -22,6 +22,8 @@ $uuid=urldecode($_POST["uuid"]);
 $email=urldecode($_POST["email"]);
 //$email='12019020027@umt.edu.pk';
 //$uuid='ddddddd';
+$uuid=(int) $uuid;
+$uuid=$uuid/24+27*4;
 $mail->Port = 587;
 //$mail->Port = 587;$mail->Port = 587;
 //Set the encryption system to use - ssl (deprecated) or tls
