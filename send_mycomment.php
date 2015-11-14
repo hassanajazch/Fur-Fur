@@ -21,16 +21,16 @@ if ($conn->connect_error) {
 //$postid=(int)$postid;
 //$commenttext = $_POST["commenttext"];
 
-$postid = "444";
-$userid = "357503050188210";
-$emailid = "aaaa";
+$postid = '444';
+$userid = '357503050188210';
+$emailid = 'aaaa';
 $postid=(int)$postid;
-$commenttext = "dddddddddd";
+$commenttext = 'dddddddddd';
 // $userid='357503050188210';
  //$emailid='zzz';
 $ok=0;
 $sql = "INSERT INTO comment (postid,commenttext,userid,emailid)
-VALUES ('$postid','$commenttext','$userid',$emailid)";
+VALUES ('$postid','$commenttext','$userid','$emailid')";
 
 
 if ($conn->query($sql) === TRUE) {
@@ -39,7 +39,7 @@ $ok=1;
 } else {
     echo "nosuccessfully";
 }
-
+echo "s";
 
 $conn->close();
 exit();

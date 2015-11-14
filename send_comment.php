@@ -30,7 +30,7 @@ $commenttext = $_POST["commenttext"];
 // $comemail='222';
 $ok=0;
 $sql = "INSERT INTO comment (postid,commenttext,userid,emailid)
-VALUES ('$postid','$commenttext','$comuuid',$comemail)";
+VALUES ('$postid','$commenttext','$comuuid','$comemail')";
 
 
 if ($conn->query($sql) === TRUE) {
