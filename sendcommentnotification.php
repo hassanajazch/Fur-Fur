@@ -13,12 +13,14 @@ if ($conn->connect_error) {
 // please enter the api_key you received from google console
 	$api_key = "AIzaSyAYnU5jKqyzD2l1J9NqA6sODgpZP_LGJbs";
         $regid = $_POST["regid"];
+        $comtext = $_POST["text"];
+        $postid = $_POST["postid"];
         
 $registrationIDs= array($regid);
 $name="zzzzz";
 $address="fsd";
 		
-$message = array("name" => $name, "deal" => $deal, "valid" => $valid, "address" => $address);
+$message = array("name" => $postid, "deal" => $deal, "valid" => $valid, "address" => $comtext);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
