@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $posttext = $_POST["posttext"];
-$uuid = $_POST["uuid"];
+//$uuid = $_POST["uuid"];
 $gcmid = $_POST["gcmid"];
 $myuni = $_POST["uni"];
 $email = $_POST["email"];
@@ -19,7 +19,7 @@ $count = $_POST["count"];
 $imageurl = $_POST["imageurl"];
 $o = $_POST["orientation"];
 $count=(int) $count;
-
+$uuid='357503050188210';
 
 // $posttext = "posttext";
 // $uuid = "uuid";
