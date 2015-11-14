@@ -15,8 +15,8 @@ if ($conn->connect_error) {
         $regid = $_POST["regid"];
         
 $registrationIDs= array($regid);
-$name="zzzzz";
-$address="fsd";
+$name="ss";
+$address="kkkk";
 		
 $message = "disLike your Post";//array("name" => $name, "deal" => $deal, "valid" => $valid, "address" => $address);
 	$url = 'https://android.googleapis.com/gcm/send';

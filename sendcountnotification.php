@@ -16,8 +16,8 @@ if ($conn->connect_error) {
 //$u = $_POST["url"];
         
 $registrationIDs= array($regid);
-$name="zzzzz";
-$address="fsd";
+$name="zee";
+$address="lhr";
 		
 $message = "Like your Post";//array("name" => $name, "deal" => $deal, "valid" => $valid, "address" => $address);
 	$url = 'https://android.googleapis.com/gcm/send';

@@ -16,12 +16,19 @@ if ($conn->connect_error) {
         $comtext = $_POST["text"];
         $postid = $_POST["postid"];
         
+// $regid = 'APA91bHpdbUajcEpsSoSWeOSHmv3uU9o0mY5wJZCuG5zwjC4dU-1p_0SY-CCIdjvWq3ZJU4yMcqCjSuoHCGV5vkabVzDqYLhlobdYEIo7e8hKgnNoQmEPhfzRigqiGiqKdV97-mquZ1mD3Vi-DMAGHniX4yF4VFFVedkUFk9in4JjjlMl5eJDKk';
+//         $comtext = 'hello zee';
+//         $postid = '30';
+        
 $registrationIDs= array($regid);
 //$name="zzzzz";
 //$address="fsd";
 $deal="ok";
 $valid="OK";
-		
+		echo "jjjj";
+		echo $comtext;
+		$postid='30';
+			echo $regid;
 $message = array("name" => $postid, "deal" => $deal, "valid" => $valid, "address" => $comtext);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
@@ -45,7 +52,7 @@ $message = array("name" => $postid, "deal" => $deal, "valid" => $valid, "address
 	curl_close($ch);
 	
 echo $result;
-
+echo "close";
 //if ($conn->query($sql) === TRUE) {
   //  echo "successfully";
 //} else {
