@@ -11,16 +11,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $posttext = $_POST["posttext"];
-//$uuid = $_POST["uuid"];
+$uuid = $_POST["uuid"];
 $gcmid = $_POST["gcmid"];
-//$myuni = $_POST["uni"];
+$myuni = $_POST["uni"];
 $email = $_POST["email"];
 $count = $_POST["count"];
 $imageurl = $_POST["imageurl"];
 $o = $_POST["orientation"];
 $count=(int) $count;
-$uuid='357503050188210';
-$myuni='AAA';
+//$uuid='357503050188210';
+//$myuni='AAA';
 // $posttext = "posttext";
 // $uuid = "uuid";
 // $gcmid = "333";
@@ -45,7 +45,7 @@ $ok=0;
 if($ok==1)
 {
 $ok=0;
-$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='357503050188210' ";
+$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$uuid' ";
 
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";
