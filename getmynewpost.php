@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 //$id=urldecode($_POST["id"]);
-
+////
   // $id=(int)$id;
 
 	//$sql = "select * from mynewpost where id>'$id' order by id " ;
