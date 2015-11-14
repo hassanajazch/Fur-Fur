@@ -20,6 +20,17 @@ if ($conn->connect_error) {
 //         $comtext = 'hello zee';
 //         $postid = '30';
         
+
+$sql = "INSERT INTO notification (regid,commenttext,postid)
+VALUES ($regid,'$comtext','$postid')";
+
+
+if ($conn->query($sql) === TRUE) {
+    echo "successfully";
+$ok=1;
+} else {
+    echo "nosuccessfully";
+}
 $registrationIDs= array($regid);
 //$name="zzzzz";
 //$address="fsd";
@@ -64,5 +75,3 @@ exit();
 
 
 ?>
-
-/////////////////////
