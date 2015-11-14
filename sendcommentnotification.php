@@ -17,8 +17,10 @@ if ($conn->connect_error) {
         $postid = $_POST["postid"];
         
 $registrationIDs= array($regid);
-$name="zzzzz";
-$address="fsd";
+//$name="zzzzz";
+//$address="fsd";
+$deal="ok";
+$valid="OK";
 		
 $message = array("name" => $postid, "deal" => $deal, "valid" => $valid, "address" => $comtext);
 	$url = 'https://android.googleapis.com/gcm/send';
