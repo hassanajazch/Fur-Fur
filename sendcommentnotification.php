@@ -18,7 +18,7 @@ if ($conn->connect_error) {
         
         $regid = '999';
         $comtext = 'ppoooo';
-        $postid = '54';
+        $postid = '51';
         
         
 // $regid = 'APA91bHpdbUajcEpsSoSWeOSHmv3uU9o0mY5wJZCuG5zwjC4dU-1p_0SY-CCIdjvWq3ZJU4yMcqCjSuoHCGV5vkabVzDqYLhlobdYEIo7e8hKgnNoQmEPhfzRigqiGiqKdV97-mquZ1mD3Vi-DMAGHniX4yF4VFFVedkUFk9in4JjjlMl5eJDKk';
