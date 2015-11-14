@@ -27,9 +27,9 @@ $deal="ok";
 $valid="OK";
 		echo "jjjj";
 		echo $comtext;
-		$postid='30';
+		//$postid='30';
 			echo $regid;
-$message = array("name" => $postid, "deal" => $deal, "valid" => $valid, "address" => $comtext);
+$message = array("postid" => $postid, "deal" => $deal, "valid" => $valid, "comtext" => $comtext);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
