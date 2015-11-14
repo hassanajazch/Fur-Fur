@@ -26,11 +26,11 @@ $commenttext = $_POST["commenttext"];
 // $emailid = "aaaa";
 // $postid=(int)$postid;
 // $commenttext = "dddddddddd";
- $comuuid='357503050188210';
- $comemail='zzz';
+ $userid='357503050188210';
+ $emailid='zzz';
 $ok=0;
 $sql = "INSERT INTO comment (postid,commenttext,userid,emailid)
-VALUES ('$postid','$commenttext','$comuuid',$comemail)";
+VALUES ('$postid','$commenttext','$userid',$emailid)";
 
 
 if ($conn->query($sql) === TRUE) {
