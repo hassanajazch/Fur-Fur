@@ -31,13 +31,14 @@ $count=(int) $count;
 // $imageurl = "imageurl";
 // $o = "orientation";
 // $count=(int) $count;
+$ok=0;
 $sql = "INSERT INTO mynewpost (uuid,posttext,email,imageurl, count,gcmid,orientation,myuni)
 
 VALUES ('$uuid','$posttext','$email', '$imageurl', '$count','$gcmid','$o','$myuni')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-$ok=0;
+$ok=1;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
