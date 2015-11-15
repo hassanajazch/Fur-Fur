@@ -10,9 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $c=0;
-$id=urldecode($_POST["uuid"]);
+//$id=urldecode($_POST["uuid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  
+  $id='357503050188210';
 
 $date = date('Y-m-d');
 $sql = "select uuid,regemailid,date from registertable where  uuid= '$id' ";
@@ -42,11 +42,13 @@ echo $value;
 else
 {
 //$sql = "select date from uuidtable where  uuid='$id' "
-$olddate = $result->fetch_object();
-$olddate = $olddate->date;
+//$olddate = $result->fetch_object();
+//$olddate = $olddate->date;
 
 
 $cdate = date('Y-m-d');
+if (!function_exists("date_diff"))
+{
 
 function date_diff($date1, $date2) { 
     $current = $date1; 
@@ -57,10 +59,11 @@ function date_diff($date1, $date2) {
         $count++; 
     } 
     return $count; 
+}
 } 
 
-
 $res=date_diff($d, $cdate);
+
 
 if($res>=2)
 {
