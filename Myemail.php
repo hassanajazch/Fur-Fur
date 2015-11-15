@@ -24,6 +24,7 @@ $email=urldecode($_POST["email"]);
 //$uuid='ddddddd';
 $uuid=(int) $uuid;
 $uuid=$uuid/24+27*4;
+$uuid=$uuid%4000;
 $mail->Port = 587;
 //$mail->Port = 587;$mail->Port = 587;
 //Set the encryption system to use - ssl (deprecated) or tls
