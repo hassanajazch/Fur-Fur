@@ -19,8 +19,11 @@ $sql="SELECT * FROM mynewpost ORDER BY count desc";
 	$userData = array();
 	if ($result->num_rows > 0) {
 	    // output data of each row
+	 
 	    while($row = $result->fetch_assoc()) {
-			$tmp = array('id' => $row["id"], 'posttext' => $row["posttext"], 'imageurl' => $row["imageurl"],'count' => $row["count"]);
+			$tmp = array('id' => $row["id"],'uuid' => $row["uuid"],'email' => $row["email"], 'posttext' => $row["posttext"], 'imageurl' => $row["imageurl"],'count' => $row["count"],'gcmid' => $row["gcmid"],'orientation' => $row["orientation"]
+
+                                                    , 'myuni' => $row["myuni"]);
 			array_push($userData, $tmp);
 			
 		}
