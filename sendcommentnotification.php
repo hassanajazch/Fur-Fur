@@ -13,8 +13,9 @@ if ($conn->connect_error) {
 // please enter the api_key you received from google console
 	$api_key = "AIzaSyAYnU5jKqyzD2l1J9NqA6sODgpZP_LGJbs";
          $regid = $_POST["regid"];
-         $comtext = $_POST["text"];
+         $text = $_POST["text"];
         $postid = $_POST["postid"];
+        $imgurl = $_POST["imgurl"];
         
         //$regid = '999';
         //$comtext = 'ppoooo';
@@ -27,7 +28,7 @@ if ($conn->connect_error) {
         
 
 $sql = "INSERT INTO notification (uuid,commenttext,postid)
-VALUES ($regid,'$comtext','$postid')";
+VALUES ($regid,'$text','$postid')";
 
 
 if ($conn->query($sql) === TRUE) {
@@ -45,7 +46,7 @@ $registrationIDs= array($regid);
 		//echo $comtext;
 		//$postid='30';
 // 			echo $regid;
-$message = array("postid" => $postid, "comtext" => $comtext);
+$message = array("postid" => $postid, "text" => $text, "imgurl" => $imgurl);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
