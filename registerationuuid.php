@@ -10,9 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $c=0;
-//$id=urldecode($_POST["uuid"]);
+$id=urldecode($_POST["uuid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  $id='357503050188210';
+  //$id='357503050188210';
 
 $date = date('Y-m-d');
 $sql = "select uuid,regemailid,date from registertable where  uuid= '$id' ";
