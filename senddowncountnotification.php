@@ -22,7 +22,7 @@ $registrationIDs= array($regid);
 //$address="kkkk";
 		
 //$message = "disLike your Post";
-$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $podtid);
+$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
