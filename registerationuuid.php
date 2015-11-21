@@ -61,7 +61,7 @@ $dStart = new DateTime('2013-03-15');
 $dEnd = new DateTime('2015-04-18');
 $dDiff = $cdate->diff($ndate);
 //echo $dDiff->format('%d days');
-$res=$dDiff->format('%d days');
+$res=$dDiff->format('%d');
 // if($rr>=2)
 // {
 //   echo "nnn";
@@ -97,7 +97,7 @@ echo "dateexpire";
 }
 else
 {
-echo $res;
+//echo $res;
 $s="datenotexpire";
 echo $s;
 
