@@ -10,11 +10,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $c=0;
-$id=urldecode($_POST["uuid"]);
+//$id=urldecode($_POST["uuid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  //$id='357503050188210';
+  $id='357503050188210';
 
-$date = date('Y-m-d');
+$date = date("Y-m-d");
 $sql = "select uuid,regemailid,date from registertable where  uuid= '$id' ";
 
 $result = $conn->query($sql);
@@ -46,24 +46,46 @@ else
 //$olddate = $olddate->date;
 
 
-$cdate = date('Y-m-d');
-if (!function_exists("date_diff"))
-{
+$cdate = new DateTime($date);
+//echo $cdate;
+$date1=date_create("2013-03-15");
+$date2=date_create("2013-12-12");
+//$diff=date_diff($d,$cdate);
+//$diff=date_diff($date1,$d);
 
-function date_diff($date1, $date2) { 
-    $current = $date1; 
-    $datetime2 = date_create($date2); 
-    $count = 0; 
-    while(date_create($current) < $datetime2){ 
-        $current = gmdate("Y-m-d", strtotime("+1 day", strtotime($current))); 
-        $count++; 
-    } 
-    return $count; 
-}
-} 
+//echo $diff->format("%R%a days");
+$dStart = new DateTime('2013-03-15');
+$dEnd = new DateTime('2015-04-18');
+$dDiff = $cdate->diff($dEnd);
+//echo $dDiff->format('%d days');
+$res=$dDiff->format('%d days');
+// if($rr>=2)
+// {
+//   echo "nnn";
+// }
+//if($dDiff>2)
+//{
 
-$res=date_diff($d, $cdate);
+//}
+//if (!function_exists("date_diff"))
+//{
+//echo "string is ok";
+// function date_diff($date1, $date2) { 
+//     $current = $date1; 
+//     $datetime2 = date_create($date2); 
+//     $count = 0; 
+//     while(date_create($current) < $datetime2){ 
+//         $current = gmdate("Y-m-d", strtotime("+1 day", strtotime($current))); 
+//         $count++; 
+//   echo "string is";
+//   echo $count;
+//     } 
+//     return $count; 
+// }
+// } 
 
+//$res=date_diff($d, $cdate);
+//$res=1;
 
 if($res>=2)
 {
@@ -72,7 +94,7 @@ echo "dateexpire";
 }
 else
 {
-//echo $res;
+echo $res;
 $s="datenotexpire";
 echo $s;
 

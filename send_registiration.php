@@ -15,7 +15,7 @@ $gcmid=$_POST["gcmid"];
 $regemailid=$_POST["regemailid"];
 
 $date = date('Y-m-d');
-
+$cdate = new DateTime($date);
 //////////////
 
 $sql = "select * from registertable where  uuid= '$uuid' ";
@@ -30,7 +30,7 @@ echo "alreadyrecord";
 else
 {
 $sq = "INSERT INTO registertable(uuid, gcmid,date,regemailid)
-VALUES ('$uuid','$gcmid', '$date','0')";
+VALUES ('$uuid','$gcmid', '$cdate','0')";
 
 if ($conn->query($sq) === TRUE) {
     echo "successfully";
