@@ -10,9 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $c=0;
-//$id=urldecode($_POST["uuid"]);
+$id=urldecode($_POST["uuid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  $id='357503050188210';
+  //$id='357503050188210';
 
 $date = date("Y-m-d");
 $sql = "select uuid,regemailid,date from registertable where  uuid= '$id' ";
@@ -56,7 +56,7 @@ $date2=date_create("2013-12-12");
 //echo $diff->format("%R%a days");
 $dStart = new DateTime('2013-03-15');
 $dEnd = new DateTime('2015-04-18');
-$dDiff = $cdate->diff($dEnd);
+$dDiff = $cdate->diff($d);
 //echo $dDiff->format('%d days');
 $res=$dDiff->format('%d days');
 // if($rr>=2)
