@@ -35,6 +35,7 @@ $ndate = new DateTime($d);
 //echo $d;
 if($r==="1")
 {
+  //aa
 $value="registerok";
 echo $value;
 }
