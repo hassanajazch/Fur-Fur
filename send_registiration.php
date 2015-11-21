@@ -10,9 +10,9 @@ if ($conn->connect_error) {
 } 
 
 $c=0;
-//$uuid=$_POST["uuid"];
-//$gcmid=$_POST["gcmid"];
-//$regemailid=$_POST["regemailid"];
+$uuid=$_POST["uuid"];
+$gcmid=$_POST["gcmid"];
+$regemailid=$_POST["regemailid"];
 
 $date = date('Y-m-d');
 //$cdate = new DateTime($date);
