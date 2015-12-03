@@ -14,6 +14,7 @@ if ($conn->connect_error) {
 //$ok=0;
 
 $comemail = $_POST["comemail"];
+$imgurl = $_POST["imgurl"];
 $comuuid = $_POST["comuuid"];
 $postid = $_POST["postid"];
 $userid = $_POST["userid"];
@@ -29,8 +30,8 @@ $commenttext = $_POST["commenttext"];
 // $comuuid='357503050188210';
 // $comemail='222';
 $ok=0;
-$sql = "INSERT INTO commenttable (postid,commenttext,userid,emailid)
-VALUES ('$postid','$commenttext','$comuuid','$comemail')";
+$sql = "INSERT INTO commenttable (postid,commenttext,userid,emailid,imgurl)
+VALUES ('$postid','$commenttext','$comuuid','$comemail','$imgurl')";
 
 
 if ($conn->query($sql) === TRUE) {
