@@ -20,6 +20,7 @@ $imageurl = $_POST["imageurl"];
 $o = $_POST["orientation"];
 $count=(int) $count;
 $mydate= date("Y-m-d H:i:s");
+$mydate=(string) $mydate;
 //ok=0
 //$uuid='357503050188210';
 //$myuni='AAA';
