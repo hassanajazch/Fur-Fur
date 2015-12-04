@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 $id=urldecode($_POST["id"]);
 
    $id=(int)$id;
-
+$mydate= date("Y-m-d H:i:s");
 //	$sql = "select * from mynewpost where id>'$id' order by id " ;
 $sql="SELECT * FROM mynewpost ORDER BY count desc";
 	$result = $conn->query($sql);
@@ -23,7 +23,7 @@ $sql="SELECT * FROM mynewpost ORDER BY count desc";
 	    while($row = $result->fetch_assoc()) {
 			$tmp = array('id' => $row["id"],'uuid' => $row["uuid"],'email' => $row["email"], 'posttext' => $row["posttext"], 'imageurl' => $row["imageurl"],'count' => $row["count"],'gcmid' => $row["gcmid"],'orientation' => $row["orientation"]
 
-                                                    , 'myuni' => $row["myuni"]);
+                                                    , 'myuni' => $row["myuni"], 'olddate' => $row["olddate"], 'cdate' => $mydate);
 			array_push($userData, $tmp);
 			
 		}
