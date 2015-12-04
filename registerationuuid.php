@@ -52,17 +52,21 @@ else
 $cdate = new DateTime($date);
 
 //echo $cdate;
-$date1=date_create("2013-03-15");
-$date2=date_create("2013-12-12");
+//$date1=date_create("2013-03-15");
+//$date2=date_create("2013-12-12");
+
 //$diff=date_diff($d,$cdate);
 //$diff=date_diff($date1,$d);
 
 //echo $diff->format("%R%a days");
-$dStart = new DateTime('2013-03-15');
-$dEnd = new DateTime('2015-04-18');
+//$dStart = new DateTime('2013-03-15');
+//$dEnd = new DateTime('2015-04-18');
 $dDiff = $cdate->diff($ndate);
 //echo $dDiff->format('%d days');
 $res=$dDiff->format('%d');
+$y=$dDiff->format('%y');
+$month=$dDiff->format('%m');
+//$day=$dDiff->format('%d');
 // if($rr>=2)
 // {
 //   echo "nnn";
@@ -91,7 +95,7 @@ $res=$dDiff->format('%d');
 //$res=date_diff($d, $cdate);
 //$res=1;
 
-if($res>=2)
+if($res>=2||$month>0||$y>0||$res<0)
 {
 //echo
 echo "dateexpire";

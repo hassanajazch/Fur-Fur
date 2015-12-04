@@ -9,6 +9,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+$mydate= date("Y-m-d H:i:s");
+//$cdate = new DateTime($mydate);
 $id=urldecode($_POST["id"]);
 ////
    $id=(int)$id;
@@ -23,9 +25,13 @@ $id=urldecode($_POST["id"]);
 	    while($row = $result->fetch_assoc()) {
 			$tmp = array('id' => $row["id"],'uuid' => $row["uuid"],'email' => $row["email"], 'posttext' => $row["posttext"], 'imageurl' => $row["imageurl"],'count' => $row["count"],'gcmid' => $row["gcmid"],'orientation' => $row["orientation"]
 
-                                                    , 'myuni' => $row["myuni"]);
+                                                    , 'myuni' => $row["myuni"], 'olddate' => $row["olddate"], 'cdate' => $mydate);
 			array_push($userData, $tmp);
-			
+			// 	$tmp = array('id' => $row["id"],'uuid' => $row["uuid"],'email' => $row["email"], 'posttext' => $row["posttext"], 'imageurl' => $row["imageurl"],'count' => $row["count"],'gcmid' => $row["gcmid"],'orientation' => $row["orientation"]
+
+   //                                                  , 'myuni' => "OOOOO");
+			// array_push($userData, $tmp);
+		
 		}
 	}
 //$userData = array_reverse($userData,true);
