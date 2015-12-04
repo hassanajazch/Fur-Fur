@@ -21,9 +21,9 @@ $o = $_POST["orientation"];
 $count=(int) $count;
 $mydate= date("Y-m-d H:i:s");
 $mydate=(string) $mydate;
-//ok=0
-//$uuid='357503050188210';
-//$myuni='AAA';
+ok=0
+// $uuid='357503050188210';
+// $myuni='AAA';
 // $posttext = "posttext";
 // $uuid = "uuid";
 // $gcmid = "333";
@@ -33,10 +33,12 @@ $mydate=(string) $mydate;
 // $imageurl = "imageurl";
 // $o = "orientation";
 // $count=(int) $count;
-$ok=0;
+// $ok=0;
+// $mydate= date("Y-m-d H:i:s");
+// $mydate=(string) $mydate;
 $sql = "INSERT INTO mynewpost (uuid,posttext,email,imageurl, count,gcmid,orientation,myuni,olddate)
 
-VALUES ('$uuid','$posttext','$email', '$imageurl', '$count','$gcmid','$o','$myuni',$mydate)";
+VALUES ('$uuid','$posttext','$email', '$imageurl', '$count','$gcmid','$o','$myuni','$mydate')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
