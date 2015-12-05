@@ -18,7 +18,7 @@ $ok=0;
 //$id='102';
 //$uuid='357503050188210';
 //$email='12019020027@umt.edu.pk';
-$regno="1";
+//$regno="1";
 //$posttext=urldecode($_POST["posttext"]);
    //$id=(int)$id;
 //ll
