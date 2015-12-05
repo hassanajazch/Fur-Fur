@@ -26,8 +26,8 @@ $ok=1;
     echo "nosucessfully";
 }
 
-if($ok==1)
-{
+//if($ok==1)
+//{
 $ok=0;
 if($regno=='0')
 {
@@ -46,7 +46,7 @@ else {
     echo "nosuccessfully";
 }
 
-}
+//}
 
 	$conn->close();
 	exit;
