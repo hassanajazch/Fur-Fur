@@ -16,6 +16,8 @@ $gcmid = $_POST["gcmid"];
 $myuni = $_POST["uni"];
 $email = $_POST["email"];
 $count = $_POST["count"];
+
+$regno=urldecode($_POST["regno"]);
 $imageurl = $_POST["imageurl"];
 $o = $_POST["orientation"];
 $count=(int) $count;
@@ -51,8 +53,14 @@ $ok=1;
 if($ok==1)
 {
 $ok=0;
+if($regno=='0')
+{
 $sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$uuid' ";
-
+}
+else
+{
+$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$email' ";
+}
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";
 

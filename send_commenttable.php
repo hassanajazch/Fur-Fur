@@ -18,9 +18,11 @@ $imgurl = $_POST["imgurl"];
 $comuuid = $_POST["comuuid"];
 $postid = $_POST["postid"];
 $userid = $_POST["userid"];
-$emailid = $_POST["emailid"];
+//$emailid = $_POST["emailid"];
 $postid=(int)$postid;
 $commenttext = $_POST["commenttext"];
+$email=urldecode($_POST["email"]);
+$regno=urldecode($_POST["regno"]);
 
 // $postid = "444";
 // $userid = "357503050188210";
@@ -43,8 +45,14 @@ $ok=1;
 
 if($ok==1)
 {
-$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$userid' ";
-
+	if($regno=='0')
+{
+$sl="UPDATE totalmarks SET count=count+2 WHERE uuid='$comuuid' ";
+}
+else
+{
+$sl="UPDATE totalmarks SET count=count+2 WHERE emailid='$email' ";	
+}
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";
 
@@ -60,8 +68,14 @@ else {
 if($ok==1)
 {
 	$ok=0;
-$sl="UPDATE totalmarks SET count=count+1 WHERE uuid='$comuuid' ";
-
+//if($regno=='0')
+//{
+//$sl="UPDATE totalmarks SET count=count+1 WHERE uuid='$comuuid' ";
+//}
+//else
+//{
+$sl="UPDATE totalmarks SET count=count+1 WHERE emailid='$userid' ";	
+//}
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";
 
