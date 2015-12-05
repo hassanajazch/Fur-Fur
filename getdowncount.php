@@ -8,13 +8,15 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$id=urldecode($_POST["id"]);
-$uuid=urldecode($_POST["uuid"]);
-$email=urldecode($_POST["email"]);
-$regno=urldecode($_POST["regno"]);
+ $id=urldecode($_POST["id"]);
+ $uuid=urldecode($_POST["uuid"]);
+ $email=urldecode($_POST["email"]);
+ $regno=urldecode($_POST["regno"]);
 $ok=0;
 //$id='53';
 //$uuid='357503050188210';
+//$regno='1';
+//$email='12019020027@umt.edu.pk';
 $sql="UPDATE mynewpost SET count=count-1 WHERE id='$id'";
 	
 //$result = $conn->query($sql);
@@ -26,8 +28,8 @@ $ok=1;
     echo "nosucessfully";
 }
 
-//if($ok==1)
-//{
+if($ok==1)
+{
 $ok=0;
 if($regno=='0')
 {
@@ -46,7 +48,7 @@ else {
     echo "nosuccessfully";
 }
 
-//}
+}
 
 	$conn->close();
 	exit;
