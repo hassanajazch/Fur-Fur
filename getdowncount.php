@@ -25,7 +25,7 @@ if ($conn->query($sql) === TRUE) {
     echo "sucessfully";
 $ok=1;
 } else {
-    echo "nosucessfully";
+    echo "notsucessfully";
 }
 
 if($ok==1)
@@ -45,7 +45,7 @@ echo "sucessfully";
 }
 else {
 
-    echo "nosuccessfully";
+    echo "notsuccessfully";
 }
 
 }
