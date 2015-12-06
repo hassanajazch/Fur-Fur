@@ -14,13 +14,14 @@ $postid=urldecode($_POST["postid"]);
   // $postid=(int)$postid;
 
 	//$sql = "select * from newpost " ;
+//$sql="SELECT * FROM commenttable where postid>'10'";
 $sql="SELECT * FROM commenttable where postid='$postid'";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],  'userid' => $row["userid"],  'imgurl' => $row["imgurl"],  'orientation' => $row["orientation"]);
+			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],  'userid' => $row["userid"],  'imgurl' => $row["imgurl"]);
 			array_push($userData, $tmp);
 			
 		}
