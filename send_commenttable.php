@@ -23,7 +23,7 @@ $postid=(int)$postid;
 $commenttext = $_POST["commenttext"];
 $email=urldecode($_POST["email"]);
 $regno=urldecode($_POST["regno"]);
-
+$o=urldecode($_POST["o"]);
 // $postid = "444";
 // $userid = "357503050188210";
 // $emailid = "aaaa";
@@ -32,8 +32,8 @@ $regno=urldecode($_POST["regno"]);
 // $comuuid='357503050188210';
 // $comemail='222';
 $ok=0;
-$sql = "INSERT INTO commenttable (postid,commenttext,userid,emailid,imgurl)
-VALUES ('$postid','$commenttext','$comuuid','$comemail','$imgurl')";
+$sql = "INSERT INTO commenttable (postid,commenttext,userid,emailid,imgurl,orientation)
+VALUES ('$postid','$commenttext','$comuuid','$comemail','$imgurl','$o')";
 
 
 if ($conn->query($sql) === TRUE) {

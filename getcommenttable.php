@@ -20,7 +20,7 @@ $sql="SELECT * FROM commenttable where postid='$postid'";
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],  'userid' => $row["userid"],  'imgurl' => $row["imgurl"]);
+			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],  'userid' => $row["userid"],  'imgurl' => $row["imgurl"],  'orientation' => $row["orientation"]);
 			array_push($userData, $tmp);
 			
 		}
