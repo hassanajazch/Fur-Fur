@@ -46,7 +46,7 @@ $registrationIDs= array($regid);
 		//echo $comtext;
 		//$postid='30';
 // 			echo $regid;
-$Like='0';
+$Like='3';
 $message = array("postid" => $postid, "text" => $text, "imgurl" => $imgurl, "Like" => $Like);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
