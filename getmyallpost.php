@@ -9,22 +9,23 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+$mydate= date("Y-m-d H:i:s");
 $postid=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  //$postid='357503050188210';
+  //$postid=(int)$postid;
 
 	//$sql = "select * from newpost " ;
-//$sql="SELECT * FROM commenttable where postid>'10'";
-$mydate= date("Y-m-d H:i:s");
-$sql="SELECT * FROM commenttable where postid='$postid'";
+$sql="SELECT * FROM mynewpost where userid='$postid'";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],  'userid' => $row["userid"],  'imgurl' => $row["imgurl"], 'olddate' => $row["olddate"], 'cdate' => $mydate);
+				$tmp = array('id' => $row["id"],'uuid' => $row["uuid"],'email' => $row["email"], 'posttext' => $row["posttext"], 'imageurl' => $row["imageurl"],'count' => $row["count"],'gcmid' => $row["gcmid"],'orientation' => $row["orientation"]
+
+                                                    , 'myuni' => $row["myuni"], 'olddate' => $row["olddate"], 'cdate' => $mydate);
 			array_push($userData, $tmp);
-			
+		
 		}
 	}
 //$userData = array_reverse($userData,true);
