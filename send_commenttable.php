@@ -24,6 +24,8 @@ $commenttext = $_POST["commenttext"];
 $email=urldecode($_POST["email"]);
 $regno=urldecode($_POST["regno"]);
 $o=urldecode($_POST["o"]);
+$gcm=urldecode($_POST["gcm"]);
+//$o=urldecode($_POST["o"]);
 $mydate= date("Y-m-d H:i:s");
 $mydate=(string) $mydate;
 // $postid = "444";
@@ -34,8 +36,8 @@ $mydate=(string) $mydate;
 // $comuuid='357503050188210';
 // $comemail='222';
 $ok=0;
-$sql = "INSERT INTO commenttable (postid,commenttext,userid,emailid,imgurl,orientation,olddate)
-VALUES ('$postid','$commenttext','$comuuid','$comemail','$imgurl','$o','$mydate')";
+$sql = "INSERT INTO commenttable (postid,commenttext,userid,emailid,imgurl,orientation,olddate,otheruuid,otheremail,othergcm)
+VALUES ('$postid','$commenttext','$comuuid','$comemail','$imgurl','$o','$mydate',$userid,$email,$gcm)";
 
 
 if ($conn->query($sql) === TRUE) {

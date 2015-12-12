@@ -9,9 +9,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$postid=urldecode($_POST["postid"]);
+//$postid=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  // $postid=(int)$postid;
+  //$postid=(int)$postid;
 
 	//$sql = "select * from newpost " ;
 $sql="SELECT * FROM commenttable where userid='$postid'";
@@ -20,7 +20,7 @@ $sql="SELECT * FROM commenttable where userid='$postid'";
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],    'imgurl' => $row["imgurl"],  'orientation' => $row["orientation"]);
+			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],    'imgurl' => $row["imgurl"],  'orientation' => $row["orientation"],    'otheruuid' => $row["otheruuid"],    'otheremail' => $row["otheremail"],    'othergcm' => $row["othergcm"]);
 			array_push($userData, $tmp);
 			
 		}
