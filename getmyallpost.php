@@ -10,12 +10,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $mydate= date("Y-m-d H:i:s");
-$postid=urldecode($_POST["postid"]);
+$uuid=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
   //$postid=(int)$postid;
 
 	//$sql = "select * from newpost " ;
-$sql="SELECT * FROM mynewpost where userid='$postid'";
+$sql="SELECT * FROM mynewpost where uuid='$uuid'";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
