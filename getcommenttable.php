@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 } 
 $postid=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
-  //$postid='357503050188210';
+//  $postid='357503050188210';
 
 	//$sql = "select * from newpost " ;
 //$sql="SELECT * FROM commenttable where postid>'10'";
