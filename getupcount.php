@@ -10,8 +10,8 @@ if ($conn->connect_error) {
 } 
 $id=urldecode($_POST["id"]);
 $uuid=urldecode($_POST["uuid"]);
-$email=urldecode($_POST["email"]);
-$regno=urldecode($_POST["regno"]);
+//$email=urldecode($_POST["email"]);
+//$regno=urldecode($_POST["regno"]);
 //$ok=0;
 //$id='53';
 //$uuid='357503050188210';
@@ -30,14 +30,14 @@ $ok=1;
 //if($ok==1)
 //{
 //$ok=0;
-if($regno=='0')
-{
+//if($regno=='0')
+//{
 $sl="UPDATE totalmarks SET count=count+3 WHERE uuid='$uuid' ";
-}
-else
-{
-$sl="UPDATE totalmarks SET count=count+3 WHERE emailid='$email' ";	
-}
+//}
+//else
+//{
+//$sl="UPDATE totalmarks SET count=count+3 WHERE emailid='$email' ";	
+//}
 if ($conn->query($sl) === TRUE) {
 echo "sucessfully";
 

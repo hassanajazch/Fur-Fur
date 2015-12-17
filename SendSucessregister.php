@@ -5,28 +5,29 @@ $username = "root";
 $password = "hassan";
 $dbname = "a3214356_yikyak";
 
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
  
-$ok=0;
-$uuid = $_POST["uuid"];
-$count = $_POST["count"];
-$emailid = $_POST["emailid"];
-$count=(int)$count;
-$email="No";
-$sql = "INSERT INTO totalmarks (emailid,uuid,count)
-VALUES ('$email','$uuid','$count')";
+
+$id = $_POST["uuid"];
 
 
-if ($conn->query($sql) === TRUE) {
-    echo "successfully";
-$ok=1;
-} else {
+
+$sl="UPDATE registertable SET regemailid='1' WHERE uuid='$id' ";
+if ($conn->query($sl) === TRUE) {
+  echo "successfully";
+}
+else {
     echo "nosuccessfully";
 }
+ 
+
+
 $conn->close();
 exit();
 ?>
+
