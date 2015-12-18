@@ -27,16 +27,16 @@ $ok=1;
     echo "notsucessfully";
 }
 
-$sl="UPDATE totalmarks SET count=count-3 WHERE emailid='$email' ";	
+// $sl="UPDATE totalmarks SET count=count-3 WHERE emailid='$email' ";	
 
-if ($conn->query($sl) === TRUE) {
-echo "sucessfully";
+// if ($conn->query($sl) === TRUE) {
+// echo "sucessfully";
 
-}
-else {
+// }
+// else {
 
-    echo "nosuccessfully";
-}
+//     echo "nosuccessfully";
+// }
 
 //}
 

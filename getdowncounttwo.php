@@ -23,20 +23,20 @@ $ok=0;
 //$ok=0;
 //if($regno=='0')
 //{
-$sl="UPDATE totalmarks SET count=count-3 WHERE uuid='$uuid' ";
-//}
-//else
-//{
-//$sl="UPDATE totalmarks SET count=count-3 WHERE emailid='$email' ";	
-//}
-if ($conn->query($sl) === TRUE) {
-echo "sucessfully";
+// $sl="UPDATE totalmarks SET count=count-3 WHERE uuid='$uuid' ";
+// //}
+// //else
+// //{
+// //$sl="UPDATE totalmarks SET count=count-3 WHERE emailid='$email' ";	
+// //}
+// if ($conn->query($sl) === TRUE) {
+// echo "sucessfully";
 
-}
-else {
+// }
+// else {
 
-    echo "notsuccessfully";
-}
+//     echo "notsuccessfully";
+// }
 $sql="UPDATE mynewpost SET count=count-2 WHERE id='$id'";
 	
 //$result = $conn->query($sql);

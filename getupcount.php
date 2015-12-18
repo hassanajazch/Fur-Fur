@@ -32,20 +32,20 @@ $ok=1;
 //$ok=0;
 //if($regno=='0')
 //{
-$sl="UPDATE totalmarks SET count=count+3 WHERE uuid='$uuid' ";
-//}
-//else
-//{
-//$sl="UPDATE totalmarks SET count=count+3 WHERE emailid='$email' ";	
-//}
-if ($conn->query($sl) === TRUE) {
-echo "sucessfully";
+// $sl="UPDATE totalmarks SET count=count+3 WHERE uuid='$uuid' ";
+// //}
+// //else
+// //{
+// //$sl="UPDATE totalmarks SET count=count+3 WHERE emailid='$email' ";	
+// //}
+// if ($conn->query($sl) === TRUE) {
+// echo "sucessfully";
 
-}
-else {
+// }
+// else {
 
-    echo "nosuccessfully";
-}
+//     echo "nosuccessfully";
+// }
 
 //}
 
