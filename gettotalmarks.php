@@ -14,14 +14,14 @@ $regno=urldecode($_POST["regno"]);
  // $postid=(int)$postid;
 
 	//$sql = "select * from newpost " 
-if($regno=='0')
-{
-$sql="SELECT * FROM totalmarks where uuid='$uuid'";
-}
-else
-{
+//if($regno=='0')
+//{
+//$sql="SELECT * FROM totalmarks where uuid='$uuid'";
+//}
+//else
+//{
 $sql="SELECT * FROM totalmarks where emailid='$email'";	
-}
+//}
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
