@@ -16,7 +16,7 @@ $email=urldecode($_POST["email"]);
 //$id='53';
 //$uuid='357503050188210';
 
-$sql="UPDATE mynewpost SET count=count-1 WHERE id='$id'";
+$sql="UPDATE mynewpost SET count=count-1 WHERE email='$email'";
 	
 //$result = $conn->query($sql);
 

@@ -9,14 +9,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $id=urldecode($_POST["id"]);
-//$uuid=urldecode($_POST["uuid"]);
+$uuid=urldecode($_POST["uuid"]);
 $email=urldecode($_POST["email"]);
-//$regno=urldecode($_POST["regno"]);
+$regno=urldecode($_POST["regno"]);
 //$ok=0;
 //$id='53';
 //$uuid='357503050188210';
 
-$sql="UPDATE mynewpost SET count=count+1 WHERE email='$email'";
+$sql="UPDATE mynewpost SET count=count-2 WHERE email='$email'";
 	
 //$result = $conn->query($sql);
 
