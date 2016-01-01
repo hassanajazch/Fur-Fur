@@ -13,7 +13,7 @@ $mydate= date("Y-m-d H:i:s");
 $email=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
   //$postid=(int)$postid;
-$email='12019020027@umt.edu.pk';
+//$email='12019020027@umt.edu.pk';
 	//$sql = "select * from newpost " ;
 $sql="SELECT * FROM mynewpost where email='$email'";
 	$result = $conn->query($sql);
