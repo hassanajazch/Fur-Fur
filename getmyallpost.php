@@ -11,6 +11,7 @@ if ($conn->connect_error) {
 } 
 $mydate= date("Y-m-d H:i:s");
 $uuid=urldecode($_POST["postid"]);
+$email1=urldecode($_POST["email"]);
 //$posttext=urldecode($_POST["posttext"]);
   //$postid=(int)$postid;
 

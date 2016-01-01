@@ -10,6 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $postid=urldecode($_POST["postid"]);
+$email1=urldecode($_POST["email"]);
 //$posttext=urldecode($_POST["posttext"]);
   //$postid=(int)$postid;
 //$postid='357503050188210';
