@@ -10,12 +10,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $mydate= date("Y-m-d H:i:s");
-$email=urldecode($_POST["postid"]);
+$uuid=urldecode($_POST["postid"]);
+$email=urldecode($_POST["email"]);
 //$posttext=urldecode($_POST["posttext"]);
   //$postid=(int)$postid;
 //$email='12019020027@umt.edu.pk';
 	//$sql = "select * from newpost " ;
-$sql="SELECT * FROM mynewpost where email='$email'";
+$sql="SELECT * FROM mynewpost where email='$email' || uuid='$uuid'";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {

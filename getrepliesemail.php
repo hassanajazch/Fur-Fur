@@ -10,11 +10,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $postid=urldecode($_POST["postid"]);
+$email=urldecode($_POST["email"]);
 //$posttext=urldecode($_POST["posttext"]);
   //$postid=(int)$postid;
 //$postid='357503050188210';
 	//$sql = "select * from newpost " ;
-$sql="SELECT * FROM commenttable where emailid='$postid'";
+$sql="SELECT * FROM commenttable where emailid='$email' || userid='$postid' ";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
