@@ -15,8 +15,8 @@ $id=urldecode($_POST["id"]);
 ////
    $id=(int)$id;
 
-	$sql = "select * from mynewpost where id>'$id' order by id " ;
-//$sql="SELECT * FROM mynewpost ORDER BY id DESC";
+	//$sql = "select * from mynewpost where id>'$id' order by id " ;
+$sql="SELECT * FROM mynewpost ";
 	//$sql = "select * from mynewpost where id>'1' order by id";
 	$result = $conn->query($sql);
 	$userData = array();

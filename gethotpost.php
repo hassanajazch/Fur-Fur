@@ -13,6 +13,7 @@ $id=urldecode($_POST["id"]);
 
    $id=(int)$id;
 $mydate= date("Y-m-d H:i:s");
+$id='12019020027@umt.edu.pk';
 //	$sql = "select * from mynewpost where id>'$id' order by id " ;
 $sql="SELECT * FROM mynewpost ORDER BY count desc";
 	$result = $conn->query($sql);
