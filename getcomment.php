@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 $postid=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
   // $postid=(int)$postid;
-
+$postid='357503050188210';
 	//$sql = "select * from newpost " ;
 $sql="SELECT * FROM comment where postid='$postid'";
 	$result = $conn->query($sql);
