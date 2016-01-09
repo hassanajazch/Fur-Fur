@@ -16,6 +16,7 @@ if ($conn->connect_error) {
   $imgurl = $_POST["imgurl"];
         $text = $_POST["posttext"];
         $postid = $_POST["postid"];
+         $or = $_POST["or"];
         
 $registrationIDs= array($regid);
 //$name="ss";
@@ -23,7 +24,7 @@ $registrationIDs= array($regid);
 		
 //$message = "disLike your Post";
 $Like='1';
-$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);
+$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid,"or" => $or, "Like" => $Like);
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
