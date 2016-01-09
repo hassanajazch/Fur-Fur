@@ -19,12 +19,12 @@ $sql = "INSERT INTO person (ID,Name)
 VALUES ('$Id','$Name');
 
 if ($conn->query($sql) === TRUE) {
-    echo "successfully";
-//$ok=1;
+    
+
 } 
 
 else {
-    echo "Not ";
+//    echo "Not ";
 }
 
 //exit();
