@@ -24,10 +24,10 @@ if ($conn->query($sql) === TRUE) {
 } 
 
 else {
-//    echo "Not ";
+
 }
 
-//exit();
+
 
 $conn->close();
 
