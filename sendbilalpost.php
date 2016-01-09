@@ -12,19 +12,19 @@ if ($conn->connect_error) {
 } 
 $Id = $_POST["Id"];
 $Name = $_POST["Name"];
-//$Id='1001';
-//$Name='asd';
+$Id='10o000';
+$Name='asd';
 $sql = "INSERT INTO person (ID,Name)
 
 VALUES ('$Id','$Name');
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "successfully";
 //$ok=1;
 } 
 
 else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Not ";
 }
 
 //exit();
