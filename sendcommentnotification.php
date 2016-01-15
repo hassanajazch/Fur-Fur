@@ -12,43 +12,26 @@ if ($conn->connect_error) {
 }
 // please enter the api_key you received from google console
 	$api_key = "AIzaSyAYnU5jKqyzD2l1J9NqA6sODgpZP_LGJbs";
-         $regid = $_POST["regid"];
-         $text = $_POST["text"];
-        $postid = $_POST["postid"];
-        $imgurl = $_POST["imgurl"];
-      //  $or = $_POST["or"];
+          $regid = $_POST["regid"];
+          $text = $_POST["text"];
+         $postid = $_POST["postid"];
+         $imgurl = $_POST["imgurl"];
+        $email = $_POST["email"];
+        $uuid = $_POST["uuid"];
+ 
+         $or = $_POST["or"];
         
-        //$regid = '999';
-        //$comtext = 'ppoooo';
-       // $postid = '51';
-        
-        
-// $regid = 'APA91bHpdbUajcEpsSoSWeOSHmv3uU9o0mY5wJZCuG5zwjC4dU-1p_0SY-CCIdjvWq3ZJU4yMcqCjSuoHCGV5vkabVzDqYLhlobdYEIo7e8hKgnNoQmEPhfzRigqiGiqKdV97-mquZ1mD3Vi-DMAGHniX4yF4VFFVedkUFk9in4JjjlMl5eJDKk';
-//         $comtext = 'hello zee';
-//         $postid = '30';
-        
-
-$sql = "INSERT INTO notification (uuid,commenttext,postid)
-VALUES ($regid,'$text','$postid')";
-
-
-if ($conn->query($sql) === TRUE) {
-    echo "successfully";
-//$ok=;
-} else {
-    echo "nosuccessfully";
-}
 $registrationIDs= array($regid);
-//$name="zzzzz";
-//$address="fsd";
-//$deal="ok";
-//$valid="OK";
-		//echo "jjjj";
-		//echo $comtext;
-		//$postid='30';
-// 			echo $regid;
+//$name="ss";
+//$address="kkkk";
+		echo '1';
+//$message = "disLike your Post";
 $Like='3';
-$message = array("postid" => $postid, "text" => $text, "imgurl" => $imgurl, "Like" => $Like);
+//$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);
+
+$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like, "or" => $or, "uuid" => $uuid, "email" => $email, "gcmid" => $regid);
+
+
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,

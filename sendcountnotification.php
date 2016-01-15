@@ -12,11 +12,15 @@ if ($conn->connect_error) {
 }
 // please enter the api_key you received from google console
 	$api_key = "AIzaSyAYnU5jKqyzD2l1J9NqA6sODgpZP_LGJbs";
-        $regid = $_POST["regid"];
-  $imgurl = $_POST["imgurl"];
-        $text = $_POST["posttext"];
-        $postid = $_POST["postid"];
-       //  $or = $_POST["or"];
+         $regid = $_POST["regid"];
+   $imgurl = $_POST["imgurl"];
+         $text = $_POST["posttext"];
+         $postid = $_POST["postid"];
+       
+            $email = $_POST["email"];
+        $uuid = $_POST["uuid"];
+ 
+         $or = $_POST["or"];
         
 $registrationIDs= array($regid);
 //$name="ss";
@@ -24,7 +28,12 @@ $registrationIDs= array($regid);
 		
 //$message = "disLike your Post";
 $Like='1';
-$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);
+echo '1';
+//$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);
+
+$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like, "or" => $or, "uuid" => $uuid, "email" => $email, "gcmid" => $regid);
+
+
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(
                 'registration_ids'  => $registrationIDs,
@@ -47,7 +56,7 @@ $message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Lik
 	curl_close($ch);
 	
 echo $result;
-
+echo 'hello';
 //if ($conn->query($sql) === TRUE) {
   //  echo "successfully";
 //} else {
