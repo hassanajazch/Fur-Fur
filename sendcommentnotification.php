@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 $registrationIDs= array($regid);
 //$name="ss";
 //$address="kkkk";
-		echo '1';
+		//echo '1';
 //$message = "disLike your Post";
 $Like='3';
 //$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);

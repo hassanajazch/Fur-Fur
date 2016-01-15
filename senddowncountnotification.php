@@ -28,7 +28,7 @@ $registrationIDs= array($regid);
 		
 //$message = "disLike your Post";
 $Like='2';
-echo '1';
+//echo '1';
 //$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);
 
 $message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like, "or" => $or, "uuid" => $uuid, "email" => $email, "gcmid" => $regid);
