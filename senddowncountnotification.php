@@ -22,7 +22,17 @@ if ($conn->connect_error) {
  
          $or = $_POST["or"];
         
+   //       $regid = '';
+   // $imgurl = '';
+   //       $text = '';
+   //       $postid = '';
+       
+   //          $email = '';
+   //      $uuid = '';
+ 
+   //       $or = '';
 $registrationIDs= array($regid);
+
 //$name="ss";
 //$address="kkkk";
 		
@@ -30,8 +40,8 @@ $registrationIDs= array($regid);
 $Like='2';
 //echo '1';
 //$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like);
-
-$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like, "or" => $or, "uuid" => $uuid, "email" => $email, "gcmid" => $regid);
+//echo $Like;
+$message = array("imgurl" => $imgurl, "text" => $text, "postid" => $postid, "Like" => $Like, "or" => $or, "uuid" => $uuid, "email" => $email, "$regid" => $regid);
 
 	$url = 'https://android.googleapis.com/gcm/send';
 	$fields = array(

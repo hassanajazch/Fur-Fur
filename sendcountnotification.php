@@ -22,6 +22,8 @@ if ($conn->connect_error) {
  
          $or = $_POST["or"];
         
+
+        
 $registrationIDs= array($regid);
 //$name="ss";
 //$address="kkkk";
