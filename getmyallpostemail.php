@@ -16,7 +16,7 @@ $email=urldecode($_POST["email"]);
   //$postid=(int)$postid;
 //$email='12019020027@umt.edu.pk';
 	//$sql = "select * from newpost " ;
-$sql="SELECT * FROM mynewpost where email='$email' || uuid='$uuid'";
+$sql="SELECT * FROM mynewpost where email='$email'";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
