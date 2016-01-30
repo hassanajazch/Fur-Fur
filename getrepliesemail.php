@@ -15,7 +15,7 @@ $email=urldecode($_POST["email"]);
   //$postid=(int)$postid;
 //$postid='357503050188210';
 	//$sql = "select * from newpost " ;
-$sql="SELECT * FROM commenttable where emailid='$email' || userid='$postid' ";
+$sql="SELECT * FROM commenttable where emailid='$email'";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
