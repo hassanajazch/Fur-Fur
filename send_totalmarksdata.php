@@ -14,11 +14,11 @@ if ($conn->connect_error) {
 $ok=0;
 $uuid = $_POST["uuid"];
 $count = $_POST["count"];
-$emailid = $_POST["emailid"];
+$emailid = $_POST["email"];
 $count=(int)$count;
-$email="No";
+//$email="No";
 $sql = "INSERT INTO totalmarks (emailid,uuid,count)
-VALUES ('$email','$uuid','$count')";
+VALUES ('$emailid','$uuid','$count')";
 
 
 if ($conn->query($sql) === TRUE) {
