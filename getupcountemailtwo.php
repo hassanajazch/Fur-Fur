@@ -7,13 +7,14 @@ $dbname = "a3214356_yikyak";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
+ 
 $id=urldecode($_POST["id"]);
 //$uuid=urldecode($_POST["uuid"]);
 $email=urldecode($_POST["email"]);
 //$regno=urldecode($_POST["regno"]);
 //$ok=0;
-//$id='53';
+$id='203';
 //$uuid='357503050188210';
 
 $sql="UPDATE mynewpost SET count=count+2 WHERE id='$id'";

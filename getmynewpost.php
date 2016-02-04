@@ -13,6 +13,7 @@ $mydate= date("Y-m-d H:i:s");
 //$cdate = new DateTime($mydate);
 $id=urldecode($_POST["id"]);
 ////
+$uni=urldecode($_POST["uni"])
    $id=(int)$id;
 
 	//$sql = "select * from mynewpost where id>'$id' order by id " ;
