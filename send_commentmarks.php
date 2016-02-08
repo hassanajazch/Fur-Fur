@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 //$ok=0;
 
 $email = $_POST["email"];
-
+//$email='12019020027@umt.edu.pk';
 $sl="UPDATE totalmarks SET count=count+2 WHERE emailid='$email' ";	
 
 if ($conn->query($sl) === TRUE) {
