@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
  
 $email=urldecode($_POST["email"]);
-//$email='12019020027@umt.edu.pk';
+$email='12019020027@umt.edu.pk';
 $sl="UPDATE totalmarks SET count=count+1 WHERE emailid='$email' ";	
 //}
 if ($conn->query($sl) === TRUE) {
