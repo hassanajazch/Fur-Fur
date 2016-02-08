@@ -14,7 +14,7 @@ $id=urldecode($_POST["id"]);
 $email=urldecode($_POST["email"]);
 //$regno=urldecode($_POST["regno"]);
 //$ok=0;
-$id='203';
+///$id='203';
 //$uuid='357503050188210';
 
 $sql="UPDATE mynewpost SET count=count+2 WHERE id='$id'";
