@@ -11,13 +11,13 @@ if ($conn->connect_error) {
 } 
 $mydate= date("Y-m-d H:i:s");
 //$cdate = new DateTime($mydate);
-$id=urldecode($_POST["id"]);
+//$id=urldecode($_POST["id"]);
 ////
-$uni=urldecode($_POST["uni"])
+//$uni=urldecode($_POST["uni"])
   // $id=(int)$id;
 
 	//$sql = "select * from mynewpost where id>'$id' order by id " ;
-$sql="SELECT * FROM mynewpost ";
+$sql ="SELECT * FROM mynewpost ";
 	//$sql = "select * from mynewpost where id>'1' order by id";
 	$result = $conn->query($sql);
 	$userData = array();
