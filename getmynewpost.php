@@ -14,7 +14,7 @@ $mydate= date("Y-m-d H:i:s");
 $id=urldecode($_POST["id"]);
 ////
 $uni=urldecode($_POST["uni"])
-   $id=(int)$id;
+  // $id=(int)$id;
 
 	//$sql = "select * from mynewpost where id>'$id' order by id " ;
 $sql="SELECT * FROM mynewpost ";
