@@ -21,7 +21,7 @@ $sql ="SELECT * FROM mynewpost  order by id";
 	//$sql = "select * from mynewpost where id>'1' order by id";
 
 	$result = $conn->query($sql);
-	echo "hello";
+	//echo "hello";
 	$userData = array();
 	if ($result->num_rows > 0) {
 	    // output data of each row
