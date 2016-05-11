@@ -16,7 +16,8 @@ $email1=urldecode($_POST["email"]);
   //$postid=(int)$postid;
 
 	//$sql = "select * from newpost " ;
-$sql="SELECT * FROM mynewpost where uuid='$uuid'";
+$uuid='357503050188210';
+$sql="SELECT * FROM mynewpost   where uuid='$uuid' order by id desc";
 	$result = $conn->query($sql);
 	$userData = array();
 	if ($result->num_rows > 0) {
