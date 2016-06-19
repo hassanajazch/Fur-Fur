@@ -9,9 +9,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$id=urldecode($_POST["id"]);
-$uni=urldecode($_POST["uni"]);
-   $id=(int)$id;
+//$id=urldecode($_POST["id"]);
+//$uni=urldecode($_POST["uni"]);
+  // $id=(int)$id;
 $mydate= date("Y-m-d H:i:s");
 //$id='12019020027@umt.edu.pk';
 //	$sql = "select * from mynewpost where id>'$id' order by id " ;
