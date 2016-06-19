@@ -30,6 +30,7 @@ $sql="SELECT * FROM mynewpost ORDER BY count desc";
 		}
 	}
 //$userData = array_reverse($userData,true);
+header('Content-Type: application/json', true);
 	echo json_encode($userData);
 	$conn->close();
 	exit;
