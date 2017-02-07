@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
- 
+
 $id = $_POST["uuid"];
 
 $sql="UPDATE registertable SET regemailid='1' WHERE uuid='$id' ";
@@ -23,10 +23,13 @@ if ($conn->query($sql) === TRUE) {
 else {
     echo "nosuccessfully";
 }
- 
+
 
 
 $conn->close();
 exit();
 ?>
 
+$conn->close();
+exit();
+?>
