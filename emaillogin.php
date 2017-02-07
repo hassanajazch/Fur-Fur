@@ -28,6 +28,7 @@ else {
 
 $conn->close();
 exit();
+exit();
 ?>
 
 $conn->close();
