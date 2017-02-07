@@ -8,7 +8,7 @@ $dbname = "a3214356_yikyak";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $mydate= date("Y-m-d H:i:s");
 $uuid=urldecode($_POST["postid"]);
 $email1=urldecode($_POST["email"]);
@@ -27,11 +27,12 @@ $sql="SELECT * FROM mynewpost   where uuid='$uuid' order by id desc";
 
                                                     , 'myuni' => $row["myuni"], 'olddate' => $row["olddate"], 'cdate' => $mydate);
 			array_push($userData, $tmp);
-		
+
 		}
 	}
 //$userData = array_reverse($userData,true);
 	echo json_encode($userData);
 	$conn->close();
 	exit();
-?>	
+?>
+// hi h
