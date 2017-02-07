@@ -7,7 +7,7 @@ $dbname = "a3214356_yikyak";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
  $id=urldecode($_POST["id"]);
  $uuid=urldecode($_POST["uuid"]);
  $email=urldecode($_POST["email"]);
@@ -27,7 +27,7 @@ $ok=0;
 // //}
 // //else
 // //{
-// //$sl="UPDATE totalmarks SET count=count-3 WHERE emailid='$email' ";	
+// //$sl="UPDATE totalmarks SET count=count-3 WHERE emailid='$email' ";
 // //}
 // if ($conn->query($sl) === TRUE) {
 // echo "sucessfully";
@@ -38,7 +38,7 @@ $ok=0;
 //     echo "notsuccessfully";
 // }
 $sql="UPDATE mynewpost SET count=count-1 WHERE id='$id'";
-	
+
 //$result = $conn->query($sql);
 
 if ($conn->query($sql) === TRUE) {
@@ -53,4 +53,6 @@ $ok=1;
 
 	$conn->close();
 	exit;
-?>	
+  $conn->close();
+  exit;
+?>
