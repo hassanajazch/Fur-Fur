@@ -1,4 +1,4 @@
-as<?php
+asdas<?php
 
 $servername = "54.169.152.134";
 $username = "root";
@@ -32,3 +32,6 @@ $sql="SELECT * FROM commenttable where postid='$postid'";
 	$conn->close();
 	exit();
 ?>
+
+
+sdf
