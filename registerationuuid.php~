@@ -15,7 +15,7 @@ $id=urldecode($_POST["uuid"]);
   //$id='357503050188210';
 //$id='351746053193630';
 $date = date("Y-m-d");
-$sql = "select uuid,regemailid,date from registertable where afs uuid= '$id' ";
+$sql = "select uuid,regemailid,date from registertable where  uuid= '$id' ";
 
 $result = $conn->query($sql);
 $result1 = $conn->query($sql);
