@@ -1,10 +1,10 @@
-a<?php
+<?php
 $servername = "54.169.152.134";
 $username = "root";
 $password = "hassan";
 $dbname = "Bilal";
 
-asdd
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
