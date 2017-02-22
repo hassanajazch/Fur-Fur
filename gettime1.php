@@ -13,7 +13,7 @@ $cdate = new DateTime($mydate);
 //$date2=date_create("2013-12-12 23:45:59");
 //$diff=date_diff($d,$cdate);
 //$diff=date_diff($date1,$d);
-
+asdf
 //echo $diff->format("%R%a days");
 //$dStart = new DateTime('2015-12-01 21:35:55');
 $dEnd = new DateTime('2015-12-05 22:45:59');

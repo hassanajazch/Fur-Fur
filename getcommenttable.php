@@ -1,4 +1,4 @@
-<?php
+asdas<?php
 
 $servername = "54.169.152.134";
 $username = "root";
@@ -8,7 +8,7 @@ $dbname = "a3214356_yikyak";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $postid=urldecode($_POST["postid"]);
 //$posttext=urldecode($_POST["posttext"]);
 //  $postid='357503050188210';
@@ -21,14 +21,17 @@ $sql="SELECT * FROM commenttable where postid='$postid'";
 	$userData = array();
 	if ($result->num_rows > 0) {
 	    // output data of each row
-	    while($row = $result->fetch_assoc()) {
+	    while($row = $result->fetch_assoc()) {dfd
 			$tmp = array('postid' => $row["postid"],  'commenttext' => $row["commenttext"],  'userid' => $row["userid"],  'imgurl' => $row["imgurl"], 'olddate' => $row["olddate"], 'cdate' => $mydate);
 			array_push($userData, $tmp);
-			
+
 		}
 	}
 //$userData = array_reverse($userData,true);
 	echo json_encode($userData);
 	$conn->close();
 	exit();
-?>	
+?>
+
+
+sdf
