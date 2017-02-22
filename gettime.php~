@@ -9,7 +9,7 @@ function dateDiff($date)
   $datetime1 = date_create($date);
   $datetime2 = date_create($mydate);
   $interval = date_diff($datetime1, $datetime2);
-  //echo $interval->format('%s Seconds %i Minutes %h Houaars %d days %m Months %y Year    Ago')."<br>";
+  //echo $interval->format('%s Seconds %i Minutes %h Hours %d days %m Months %y Year    Ago')."<br>";
   $min=$interval->format('%i');
   $sec=$interval->format('%s');
   $hour=$interval->format('%h');
